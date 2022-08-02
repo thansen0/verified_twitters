@@ -18,10 +18,12 @@ BEARER_TOKEN = config["DEFAULT"]["BEARER_TOKEN"].strip("'\"")
 
 client = tweepy.Client(bearer_token=BEARER_TOKEN, consumer_key=CONSUMER_KEY, consumer_secret=CONSUMER_SECRET, access_token=ACCESS_TOKEN, access_token_secret=ACCESS_TOKEN_SECRET, wait_on_rate_limit=True)
 
+# account ID for @verified https://twitter.com/verified/following
+account_id = 63796828
 
 f = open("usernames.txt", "w")
 
-for response in tweepy.Paginator(client.get_users_following, 63796828, max_results=1000):
+for response in tweepy.Paginator(client.get_users_following, account_id, max_results=1000):
     print(response.data[0])
 
     for d in response.data:
