@@ -4,7 +4,6 @@
 # Ensures the API keys are correct
 import tweepy
 import configparser
-import time
 
 # Twitter API credentials
 config = configparser.ConfigParser()
