@@ -21,7 +21,7 @@ client = tweepy.Client(bearer_token=BEARER_TOKEN, consumer_key=CONSUMER_KEY, con
 account_id = 63796828
 
 try:
-    f = open("usernames.txt", "w")
+    f = open("verified_users.txt", "w")
 
     # 1000 is the largest number allowed
     for response in tweepy.Paginator(client.get_users_following, account_id, max_results=1000):

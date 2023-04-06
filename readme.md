@@ -18,7 +18,7 @@ The verified\_users.csv file is split with quotation marks and commas and is str
 
 ## Note when building
 
-configparser can't interpret '%' characters, however one way you can fix this if your bearer token has them is to double them up. i.e. '%' => '%%', this technique is [mentioned here](https://stackoverflow.com/questions/71854527/configparser-interpolationsyntaxerror-must-be-followed-by-or-found)
+configparser can't interpret '%' characters, however one way you can fix this if your bearer token has them is to double them up. i.e. '%' => '%%', this technique is [mentioned here](https://stackoverflow.com/questions/71854527/configparser-interpolationsyntaxerror-must-be-followed-by-or-found). Once you have your consumer key you can [follow this guide](https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens) to generate the bearer token from the command line.
 
 ## Build Notes
 
@@ -34,7 +34,7 @@ Otherwise you can run this file on your own by filling in the keys and running
 python3 followerList.py
 ```
 
-When you run this script it will generate a usernames.txt file structured as strings separated by commas. If you want to convert it to a more standard csv file separated with commas and quotation marks you can change the usernames.txt file to verified\_users.txt, and then run csv-conv.py to get verified\_users.csv.
+When you run this script it will generate a verified\_users.txt file structured as strings separated by commas. If you want to convert it to a more standard csv file separated with commas and quotation marks you can run csv-conv.py to get verified\_users.csv.
 
 ```
 python3 csv-conv.py
