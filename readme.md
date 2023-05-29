@@ -1,9 +1,13 @@
+## UPDATE
+
+It looks like the user @verified no long follows who's verified on Twitter. If this changes in the future I'll try to update the code, however this method no longer works as far as I can tell. You can still see the old lists in the git repo history with the 'verified\_users.csv' file if you're ok with older data.
+
 # Verified Twitter User List
 
 This contains two things:
 
  - A list of all verified twitter users, their account ID's, and the account names
- - A python script to get a list of all people any particular twitter account follows (in this case the [verified](https://twitter.com/verified/following) account, which follows all verified twitter users).
+ - A python script to get a list of all people any particular twitter account follows (in this case the [@verified](https://twitter.com/verified/following) account, which follows all verified twitter users).
 
 The list was updated on 11/12/2022 however will continue to become more out of date with time (although hopefully the git history will reflect some interesting changes in verification status after Elon purchased twitter). If you want to redownload the verified twitter list you will need to get API keys from twitter and run the script (which may take 15 minutes per 15k users you pull due to twitter rate limiting).
 
